@@ -49,6 +49,13 @@ namespace Service
       return value;
     }
 
+    /// <summary>
+    /// Get data average via hardcoded every data key to get object value!
+    /// 
+    /// So this function can not get other unknown key values and calculate the average.
+    /// 
+    /// 透過寫死的方式來取得物件值，且無法取得其他未知的資料值並計算
+    /// </summary>
     public DataTemplate GetAllDataAvg()
     {
       DataTemplate dataTemplate = new DataTemplate ()
@@ -70,10 +77,18 @@ namespace Service
       }
 
       // mock data的隨機字串所對應的List就無法取得!!
+      // mock data can not hardcode to get the random key's value!!
 
       return dataTemplate;
     }
 
+    /// <summary>
+    /// Use the foreach to iterate the data and alculate the average.
+    /// 
+    /// When the data have any new data key, this function can get the new value very well.
+    /// 
+    /// 透過迴圈迭帶物件結構取值並計算，即便有未知的值也可以正常運作
+    /// </summary>
     public Dictionary<string, double> GetAllDataAvgDictionary()
     {
       Dictionary<string, double> data = new Dictionary<string, double>();

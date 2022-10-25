@@ -14,7 +14,12 @@ namespace HelloWorld
       DataHandler dataHandler = new DataHandler();
 
       Console.WriteLine("Hello World!");
+
+      // Try to get some value and convert to json string.
       Console.WriteLine(JsonSerializer.Serialize(dataHandler.GetDataList("user_count")));
+
+      // The following methods all seem to do the same thing. But you can go to the function definition.
+      // 下面的方法看起來都做一樣的事情，但你可以看一下這個方法的定義
       Console.WriteLine(JsonSerializer.Serialize(dataHandler.GetAllDataAvg()));
       Console.WriteLine(JsonSerializer.Serialize(dataHandler.GetAllDataAvgDictionary()));
     }
